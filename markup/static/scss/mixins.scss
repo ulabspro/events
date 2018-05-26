@@ -1,0 +1,75 @@
+// Mixins.
+
+@mixin nl {
+  margin: 0;
+  padding: 0;
+  text-indent: 0;
+  list-style: none;
+  list-style-position: outside;
+}
+
+@mixin cf {
+  &:before,
+  &:after {
+    display: table;
+    content: "";
+  }
+
+  &:after {
+    clear: both;
+  }
+
+  .lt-ie8 & {
+    zoom: 1;
+  }
+}
+
+@function strip-units($value) {
+  @if type-of($value) == 'number' {
+    @return $value / ($value * 0 + 1);
+  } @else {
+    @warn '`#{$value}` is not a number';
+    @return $value;
+  }
+}
+
+@function rem-calc($pixels, $context: $base-font-size) {
+  $pixels: strip-units($pixels);
+  $context: strip-units($context);
+  @return ($pixels / $context) * 1rem;
+}
+
+@mixin transition {
+  transition: all .4s ease;
+}
+
+// alignment
+@mixin vertical-center {
+  position: absolute;
+  top: 50%;
+
+  transform: translateY(-50%);
+}
+
+@mixin horizontal-center {
+  position: absolute;
+  left: 50%;
+
+  transform: translateX(-50%);
+}
+
+@mixin absolute-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  transform: translate(-50%,-50%);
+}
+
+@mixin reset-alignment {
+  position: initial;
+  top: initial;
+  left: initial;
+
+  transform: none;
+}

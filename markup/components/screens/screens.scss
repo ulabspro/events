@@ -1,0 +1,45 @@
+.screens {
+  &__wrapper {
+    position: relative;
+
+    display: flex;
+
+    align-items: center;
+    @extend .wrapper;
+    justify-content: space-between;
+  }
+  &__image {
+    position: relative;
+    right: -210px;
+    img {
+      display: block;
+    }
+  }
+  &._reverse {
+    .screens__wrapper {
+      flex-direction: row-reverse;
+    }
+    .screens__image {
+      right: inherit;
+      left: -210px;
+    }
+  }
+}
+
+.screens-description {
+  margin-top: -60px;
+  &__title {
+    font-size: rem-calc(30);
+    font-weight: 600;
+
+    color: #fff;
+  }
+  &__text {
+    font-size: rem-calc(24);
+    line-height: rem-calc(36);
+
+    padding-top: 30px;
+
+    color: #fff;
+  }
+}

@@ -1,0 +1,35 @@
+.header {
+  position: fixed;
+  z-index: 99;
+  right: 0;
+  left: 0;
+
+  width: 100%;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  &__wrapper {
+    @extend .wrapper;
+  }
+}
+
+.header-menu {
+  display: flex;
+
+  width: 100%;
+
+  align-items: center;
+  justify-content: center;
+  &__item {
+    font-size: 24px;
+
+    margin: 0 25px;
+
+    text-decoration: none;
+
+    color: #fff;
+    &:hover,
+    &._active {
+      text-decoration: underline;
+    }
+  }
+}

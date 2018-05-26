@@ -1,0 +1,20 @@
+doctype html
+html(class="no-js", lang="ru")
+
+  include ../components/head/head
+  include ../components/header/header
+  include ../components/top-baner/top-baner
+  include ../components/download/download
+  include ../components/screens/screens
+
+  head
+    +head(head.defaults)
+  body
+    main.main
+      +header
+      +top-baner
+      +download
+      +screens
+
+    //- Main scripts. You can replace it, but I recommend you to leave it here
+    script(src='%=static=%js/main%=hash=%%=min=%.js')

@@ -1,0 +1,35 @@
+.download {
+  padding-bottom: 168px;
+  &__wrapper {
+    @extend .wrapper;
+  }
+  &__text {
+    font-size: rem-calc(24);
+    line-height: rem-calc(36);
+
+    padding-top: 30px;
+
+    text-align: center;
+
+    color: #fff;
+  }
+  &__list {
+    display: flex;
+
+    padding-top: 70px;
+
+    align-items: center;
+    justify-content: center;
+  }
+  &__item {
+    display: block;
+
+    margin: 0 6px;
+    &._playmarket {
+      @include bg($playmarket);
+    }
+    &._appstore {
+      @include bg($appstore);
+    }
+  }
+}
