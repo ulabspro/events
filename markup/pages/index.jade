@@ -6,10 +6,12 @@ html(class="no-js", lang="ru")
   include ../components/top-baner/top-baner
   include ../components/download/download
   include ../components/screens/screens
+  include ../components/preloader/preloader
 
   head
     +head(head.defaults)
-  body
+  body._hidden
+    +preloader
     main.main
       +header
       +top-baner

@@ -1,1 +1,3 @@
-lazyload();
+$(document).ready(function () {
+  
+});

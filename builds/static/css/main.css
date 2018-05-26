@@ -385,7 +385,7 @@ blockquote {
   margin: 0;
 }
 
-.wrapper, .screens__wrapper, .download__wrapper, .top-baner__wrapper, .header__wrapper {
+.wrapper, .download__wrapper, .header__wrapper, .screens__wrapper, .top-baner__wrapper {
   box-sizing: border-box;
   width: 100%;
   max-width: 1280px;
@@ -399,60 +399,9 @@ body {
   background-color: #745ca1;
 }
 
-.screens__wrapper {
-  position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-
-.screens__image {
-  position: relative;
-  right: -210px;
-  -webkit-transition: all .4s ease;
-  transition: all .4s ease;
-  visibility: hidden;
-  opacity: 0;
-}
-
-.screens__image img:not([src]) {
-  visibility: hidden;
-  opacity: 0;
-}
-
-.screens._reverse .screens__wrapper {
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: reverse;
-      -ms-flex-direction: row-reverse;
-          flex-direction: row-reverse;
-}
-
-.screens._reverse .screens__image {
-  right: inherit;
-  left: -210px;
-}
-
-.screens-description {
-  margin-top: -60px;
-}
-
-.screens-description__title {
-  font-size: 1.875rem;
-  font-weight: 600;
-  color: #fff;
-}
-
-.screens-description__text {
-  font-size: 1.5rem;
-  line-height: 2.25rem;
-  padding-top: 30px;
-  color: #fff;
+html._hidden,
+body._hidden {
+  overflow: hidden;
 }
 
 .download {
@@ -503,6 +452,110 @@ body {
   background-repeat: no-repeat;
 }
 
+.header {
+  position: fixed;
+  z-index: 99;
+  right: 0;
+  left: 0;
+  width: 100%;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+.header-menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.header-menu__item {
+  font-size: 24px;
+  margin: 0 25px;
+  text-decoration: none;
+  color: #fff;
+}
+
+.header-menu__item:hover, .header-menu__item._active {
+  text-decoration: underline;
+}
+
+.preloader {
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #4b2c6c;
+}
+
+.preloader__layout {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.preloader__loader {
+  margin-top: 60px;
+  text-align: center;
+}
+
+.screens__wrapper {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.screens__image {
+  position: relative;
+  right: -210px;
+}
+
+.screens._reverse .screens__wrapper {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+}
+
+.screens._reverse .screens__image {
+  right: inherit;
+  left: -210px;
+}
+
+.screens-description {
+  margin-top: -60px;
+}
+
+.screens-description__title {
+  font-size: 1.875rem;
+  font-weight: 600;
+  color: #fff;
+}
+
+.screens-description__text {
+  font-size: 1.5rem;
+  line-height: 2.25rem;
+  padding-top: 30px;
+  color: #fff;
+}
+
 .top-baner {
   position: relative;
   width: 100%;
@@ -545,38 +598,4 @@ body {
   display: block;
   width: auto;
   height: 100%;
-}
-
-.header {
-  position: fixed;
-  z-index: 99;
-  right: 0;
-  left: 0;
-  width: 100%;
-  padding-top: 40px;
-  padding-bottom: 40px;
-}
-
-.header-menu {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  width: 100%;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-.header-menu__item {
-  font-size: 24px;
-  margin: 0 25px;
-  text-decoration: none;
-  color: #fff;
-}
-
-.header-menu__item:hover, .header-menu__item._active {
-  text-decoration: underline;
 }
