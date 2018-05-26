@@ -11,8 +11,16 @@
   &__image {
     position: relative;
     right: -210px;
-    img {
-      display: block;
+
+    visibility: hidden;
+
+    opacity: 0;
+
+    @include transition;
+    img:not([src]) {
+      visibility: hidden;
+
+      opacity: 0;
     }
   }
   &._reverse {
