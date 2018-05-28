@@ -1,0 +1,44 @@
+mixin footer(data)
+  .footer#footer
+    .footer__wrapper
+      .footer__column
+        .footer__logo
+          img(src="%=static=%images/assets/footer/logo-qe.png" alt="")
+
+        .footer-download
+          a(href="#" title="").footer-download__item
+            img(src="%=static=%images/assets/footer/playmarket.png" alt="")
+          a(href="#" title="").footer-download__item
+            img(src="%=static=%images/assets/footer/appstore.png" alt="")
+
+        .footer__logo
+          img(src="%=static=%images/assets/footer/logo-ilq.png" alt="")
+
+      .footer__column
+        .footer-menu
+          a(href="#about" title="").footer-menu__item About
+          a(href="#download" title="").footer-menu__item Download
+          a(href="#features" title="").footer-menu__item Features
+          a(href="#footer" title="").footer-menu__item Contacts
+
+      .footer__column
+        .footer-contacts
+          .footer-contacts__item Contacts
+          a(href="tel:97431449299").footer-contacts__item._phone (+974) 3144 9299
+          a(href="mailto:gulzar@qatarevents.co?subject=Qatar Events App").footer-contacts__item._email gulzar@qatarevents.co 
+
+      .footer__column
+        .footer-signup
+          .footer-signup__title Sign Up for Newsletter 
+          .footer-signup__form
+            input(type="text" value="" placeholder="E-mail")
+            button(type="submit") Yalla!
+
+        .footer-social
+          .footer-social__title Stay Connected
+          .footer-social__list
+            a(href="https://www.facebook.com/QatarEvents/" title="" target="_blank").footer-social__item._fb
+            a(href="https://www.instagram.com/qatarevents/" title="" target="_blank").footer-social__item._in
+            a(href="https://twitter.com/qatarevents" title="" target="_blank").footer-social__item._tw
+
+    .footer__copyright 2018 All Right Reserved

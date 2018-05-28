@@ -6,6 +6,10 @@
 
   background: url(%=static=%general/bg.jpg) no-repeat center;
   background-size: cover;
+  @media screen and (max-width: 760px) {
+    height: auto;
+    padding-top: 30px;
+  }
   &__wrapper {
     position: relative;
 
@@ -13,6 +17,18 @@
     padding-top: 80px;
 
     @extend .wrapper;
+    @media screen and (max-width: 760px) {
+      height: auto;
+      padding-top: 0;
+    }
+  }
+  &__logo {
+    img {
+      @media screen and (max-width: 760px) {
+        width: 90%;
+        height: auto;
+      }
+    }
   }
   &__left {
     padding-left: 40px;
@@ -20,6 +36,13 @@
     text-align: center;
 
     @include vertical-center;
+    @media screen and (max-width: 760px) {
+      position: relative;
+
+      padding-left: 0;
+
+      @include reset-alignment;
+    }
   }
   &__text {
     font-size: rem-calc(24);
@@ -37,11 +60,21 @@
     right: 0;
 
     height: 88%;
+    @media screen and (max-width: 760px) {
+      position: relative;
+      top: 0;
+
+      margin-top: 20px;
+    }
     img {
       display: block;
 
       width: auto;
       height: 100%;
+      @media screen and (max-width: 760px) {
+        width: 100%;
+        height: auto;
+      }
     }
   }
 }

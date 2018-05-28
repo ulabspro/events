@@ -7,6 +7,7 @@ html(class="no-js", lang="ru")
   include ../components/download/download
   include ../components/screens/screens
   include ../components/preloader/preloader
+  include ../components/footer/footer
 
   head
     +head(head.defaults)
@@ -17,6 +18,6 @@ html(class="no-js", lang="ru")
       +top-baner
       +download
       +screens
-
+      +footer
     //- Main scripts. You can replace it, but I recommend you to leave it here
     script(src='%=static=%js/main%=hash=%%=min=%.js')

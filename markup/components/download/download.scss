@@ -1,5 +1,8 @@
 .download {
   padding-bottom: 168px;
+  @media screen and (max-width: 760px) {
+    padding-bottom: 60px;
+  }
   &__wrapper {
     @extend .wrapper;
   }
@@ -12,6 +15,9 @@
     text-align: center;
 
     color: #fff;
+    @media screen and (max-width: 760px) {
+      padding-top: 0;
+    }
   }
   &__list {
     display: flex;
@@ -20,11 +26,19 @@
 
     align-items: center;
     justify-content: center;
+    @media screen and (max-width: 760px) {
+      display: block;
+
+      padding-top: 20px;
+    }
   }
   &__item {
     display: block;
 
     margin: 0 6px;
+    @media screen and (max-width: 760px) {
+      margin: 0 auto 16px;
+    }
     &._playmarket {
       @include bg($playmarket);
     }

@@ -10,10 +10,21 @@
   background-color: #4b2c6c;
   &__layout {
     @include absolute-center;
+    @media screen and (max-width: 760px) {
+      width: 90%;
+    }
   }
   &__loader {
     margin-top: 60px;
 
     text-align: center;
+  }
+  &__logo {
+    img {
+      @media screen and (max-width: 760px) {
+        width: 100%;
+        height: auto;
+      }
+    }
   }
 }

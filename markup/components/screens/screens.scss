@@ -7,10 +7,22 @@
     align-items: center;
     @extend .wrapper;
     justify-content: space-between;
+    @media screen and (max-width: 760px) {
+      display: block;
+    }
   }
   &__image {
     position: relative;
     right: -210px;
+    @media screen and (max-width: 760px) {
+      right: 0;
+    }
+    img {
+      @media screen and (max-width: 760px) {
+        width: 100%;
+        height: auto;
+      }
+    }
   }
   &._reverse {
     .screens__wrapper {
@@ -19,17 +31,26 @@
     .screens__image {
       right: inherit;
       left: -210px;
+      @media screen and (max-width: 760px) {
+        left: 0;
+      }
     }
   }
 }
 
 .screens-description {
   margin-top: -60px;
+  @media screen and (max-width: 760px) {
+    margin-top: 0;
+  }
   &__title {
     font-size: rem-calc(30);
     font-weight: 600;
 
     color: #fff;
+    @media screen and (max-width: 760px) {
+      font-size: rem-calc(24);
+    }
   }
   &__text {
     font-size: rem-calc(24);
@@ -38,5 +59,12 @@
     padding-top: 30px;
 
     color: #fff;
+    @media screen and (max-width: 760px) {
+      font-size: rem-calc(18);
+      line-height: rem-calc(26);
+
+      margin-bottom: 20px;
+      padding-top: 20px;
+    }
   }
 }
